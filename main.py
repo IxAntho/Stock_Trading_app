@@ -24,8 +24,8 @@ NEWS_API_KEY = "3a729889d6de45599c8b233890dba015"
 NEWS_API_ENDPOINT = "https://newsapi.org/v2/everything?q=tesla&from=2024-01-14&sortBy=publishedAt&apiKey=3a729889d6de45599c8b233890dba015"
 
 # Twilio API tools
-ACCOUNT_SID = "AC4d533db3a87b0a2f43da993e2ef02faf"
-AUTH_TOKEN = "4c559637bd9d9beaeea5d619483eaf78"
+ACCOUNT_SID = ["your account SID"]
+AUTH_TOKEN = ["Your authentication token"]
 
 
 def calculate_percentage_change():
@@ -67,9 +67,9 @@ def send_message(percentage, news):
     client = Client(ACCOUNT_SID, AUTH_TOKEN)
 
     message = client.messages.create(
-        from_='+15077347375',
+        from_=["Your phone number"],
         body=f'{body_message}',
-        to='+50245064076'
+        to=["Another phone number"]
     )
     print(message)
 
